@@ -1,4 +1,4 @@
-@import './help.scss';
+@import './helper.scss';
 
 body {
     margin: 0;
@@ -46,4 +46,12 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-size: px(16);
 }
