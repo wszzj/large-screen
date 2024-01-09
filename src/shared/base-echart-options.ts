@@ -3,10 +3,10 @@ export const baseEchartOptions = {
   title: { show: false },
   legend: { show: false },
   grid: {
-    x: px(40),
-    y: px(40),
-    x2: px(40),
-    y2: px(40),
+    top: px(40),
+    left: px(40),
+    right: px(40),
+    bottom: px(40),
   },
   textStyle: {
     fontSize: px(12),
