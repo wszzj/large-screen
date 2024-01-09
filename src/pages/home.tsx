@@ -5,6 +5,10 @@ import { Chart2 } from "../components/Chart2";
 import { Chart3 } from "../components/Chart3";
 import { Chart4 } from "../components/Chart4";
 import { Chart5 } from "../components/Chart5";
+import { Chart6 } from "../components/Chart6";
+import { Chart7 } from "../components/Chart7";
+import { Chart8 } from "../components/Chart8";
+import { Chart9 } from "../components/Chart9";
 
 export const Home = () => {
   const year = new Date().getFullYear();
@@ -24,7 +28,9 @@ export const Home = () => {
           <section className="bordered section3">
             <Chart5 />
           </section>
-          <section className="bordered section4"></section>
+          <section className="bordered section4">
+            <Chart6 />
+          </section>
           <section className="bordered section5"></section>
         </main>
         <footer>&copy; {year}年 大屏监控</footer>
