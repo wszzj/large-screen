@@ -9,87 +9,45 @@ export const Chart4 = () => {
     const myChart = echarts.init(divRef.current);
     myChart.setOption(
       createEchartsOptions({
-        legend: {
-          data: ["2021年", "2022年"],
-          bottom: 0,
-          textStyle: {
-            color: "white",
-          },
-        },
-        tooltip: {
-          trigger: "axis",
-          axisPointer: {
-            type: "shadow",
-          },
-        },
-        grid: {
-          left: px(40),
-          top: px(40),
-          right: px(40),
-          bottom: px(40),
-        },
         xAxis: {
-          type: "value",
-          boundaryGap: [0, 0.01],
-          splitLine: { show: false },
-          axisLabel: { show: false },
+          type: "category",
+          boundaryGap: false,
+          data: [0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24],
+          splitLine: { show: true, lineStyle: { color: "#073E78" } },
+          axisTick: { show: false },
+          axisLine: { show: false },
         },
         yAxis: {
-          type: "category",
-          data: [
-            "城关区公安局",
-            "七里河区公安局",
-            "西固区公安局",
-            "安宁区公安局",
-            "红古区公安局",
-            "永登县公安局",
-            "皋兰县公安局",
-            "榆中县公安局",
-            "新区公安局",
-          ],
+          type: "value",
+          splitLine: { lineStyle: { color: "#073E78" } },
           axisLabel: {
-            formatter(value: string) {
-              return value.replace("公安局", "\n公安局");
+            formatter(value: number) {
+              return (value * 100).toString() + "%";
             },
           },
         },
         series: [
           {
-            name: "2021年",
-            type: "bar",
-            data: [10, 29, 24, 100, 17, 30, 80, 40, 31],
-            itemStyle: {
-              normal: {
-                color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
-                  {
-                    offset: 0,
-                    color: "#2034f9",
-                  },
-                  {
-                    offset: 1,
-                    color: "#04a1ff",
-                  },
-                ]),
-              },
-            },
-          },
-          {
-            name: "2022年",
-            type: "bar",
-            data: [11, 30, 25, 101, 18, 31, 81, 41, 32],
-            itemStyle: {
-              normal: {
-                color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
-                  {
-                    offset: 0,
-                    color: "#b92ae8",
-                  },
-                  {
-                    offset: 1,
-                    color: "#6773e7",
-                  },
-                ]),
-              },
+            name: "故意伤人",
+            type: "line",
+            data: [
+              0.15, 0.13, 0.11, 0.13, 0.14, 0.15, 0.16, 0.18, 0.21, 0.19, 0.17,
+              0.16, 0.15,
+            ],
+            symbol: "circle",
+            symbolSize: px(12),
+            lineStyle: { width: px(2) },
+            areaStyle: {
+              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                {
+                  offset: 0,
+                  color: "#414a9f",
+                },
+                {
+                  offset: 1,
+                  color: "#1b1d52",
+                },
+              ]),
             },
           },
         ],
@@ -97,8 +55,8 @@ export const Chart4 = () => {
     );
   }, []);
   return (
-    <div className="ranking bordered">
-      <h2>破获案件排名</h2>
+    <div className="timeFrame bordered">
+      <h2>案发时间段</h2>
       <div ref={divRef} className="chart" />
     </div>
   );

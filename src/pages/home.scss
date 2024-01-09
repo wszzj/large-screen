@@ -77,8 +77,10 @@
 
 
         >.section2 {
-
             grid-area: box2;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
 
         >.section3 {
@@ -95,7 +97,8 @@
 
         .statistics,
         .ranking,
-        .trend {
+        .trend,
+        .timeFrame {
             height: px(315);
             display: flex;
             flex-direction: column;
@@ -117,6 +120,11 @@
                 flex: 1;
             }
 
+        }
+
+        .trend,
+        .timeFrame {
+            height: px(363);
         }
 
         .ranking {
