@@ -98,7 +98,8 @@
         .statistics,
         .ranking,
         .trend,
-        .timeFrame {
+        .timeFrame,
+        .result {
             height: px(315);
             display: flex;
             flex-direction: column;
@@ -130,6 +131,34 @@
         .ranking {
             height: px(423);
 
+        }
+
+        .result {
+            >table {
+                margin-top: px(38);
+                border-collapse: collapse;
+
+                th,
+                td {
+                    border: 1px solid #1a3671;
+                }
+
+                thead {
+                    th {
+                        height: px(70);
+                        box-shadow: inset 0 0 px(60) 0 #1f3d85;
+                    }
+                }
+
+                tbody {
+                    td {
+                        height: px(50);
+                        width: px(88);
+                        background: #1c2456;
+                    }
+
+                }
+            }
         }
     }
 }
