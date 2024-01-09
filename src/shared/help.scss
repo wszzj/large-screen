@@ -1,5 +1,5 @@
 @function px($n) {
-    @return $n / 2420 * 100rem; //设计稿宽度2420px
+    @return calc($n / 2420) * 100rem; //设计稿宽度2420px
 }
 
 $blue: #002866;
