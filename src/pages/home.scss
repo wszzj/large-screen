@@ -1,1 +1,8 @@
-@import '../shared/help.scss'
+@import '../shared/help.scss';
+
+.home {
+    header {
+        height: px(99);
+        background-size: cover;
+    }
+}
