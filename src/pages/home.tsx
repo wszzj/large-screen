@@ -4,6 +4,7 @@ import { Chart1 } from "../components/Chart1";
 import { Chart2 } from "../components/Chart2";
 
 export const Home = () => {
+  const year = new Date().getFullYear();
   return (
     <div className="App">
       <div className="home">
@@ -18,6 +19,7 @@ export const Home = () => {
           <section className="bordered section4"></section>
           <section className="bordered section5"></section>
         </main>
+        <footer>&copy; {year}年 大屏监控</footer>
       </div>
     </div>
   );
