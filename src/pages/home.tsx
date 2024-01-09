@@ -2,6 +2,8 @@ import "./home.scss";
 import headerBg from "../images/header.png";
 import { Chart1 } from "../components/Chart1";
 import { Chart2 } from "../components/Chart2";
+import { Chart3 } from "../components/Chart3";
+import { Chart4 } from "../components/Chart4";
 
 export const Home = () => {
   const year = new Date().getFullYear();
@@ -14,7 +16,10 @@ export const Home = () => {
             <Chart1 />
             <Chart2 />
           </section>
-          <section className="section2"></section>
+          <section className="section2">
+            <Chart3 />
+            <Chart4 />
+          </section>
           <section className="bordered section3"></section>
           <section className="bordered section4"></section>
           <section className="bordered section5"></section>
