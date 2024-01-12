@@ -28,11 +28,10 @@ export const Home = () => {
           <section className="bordered section3">
             <Chart5 />
           </section>
-          <section className="bordered section4">
+          <section className="section4">
             <Chart6 />
             <div className="bordered ages">
               <h2>犯罪人员年龄段分布</h2>
-
               <div className="charts">
                 <Chart7 />
                 <Chart8 />
