@@ -53,8 +53,8 @@ export const Home = () => {
             <div className="bordered row2">
               <h2>案件街道统计</h2>
               <div className="charts">
+                <Chart12 />
                 <Chart10 />
-                <Chart11 />
               </div>
             </div>
             <div className="bordered row3">

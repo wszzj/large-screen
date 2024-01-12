@@ -28,9 +28,7 @@ export const Chart7 = () => {
               position: "inside",
               color: "white",
               fontSize: px(20),
-              formatter(options: { value: number; name: string }) {
-                return options.value * 100 + "%";
-              },
+              formatter: " {d}" + "%",
             },
             labelLine: { show: false },
             itemStyle: {
