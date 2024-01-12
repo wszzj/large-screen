@@ -4,22 +4,16 @@ import { px } from "../shared/px";
 import { createEchartsOptions } from "../shared/create-echarts-options";
 export const Chart7 = () => {
   const divRef = useRef(null);
+  const colors = ["#8D70F8", "#33A4FA"];
   useEffect(() => {
     const myChart = echarts.init(divRef.current);
     myChart.setOption(
       createEchartsOptions({
-        color: ["#8D70F8", "#33A4FA"],
+        color: colors,
         tooltip: {
           trigger: "item",
         },
-        legend: {
-          bottom: 0,
-          itemHeight: px(18),
-          itemWidth: px(28),
-          textStyle: {
-            color: "#fff",
-          },
-        },
+
         xAxis: { show: false },
         yAxis: { show: false },
 
@@ -27,7 +21,7 @@ export const Chart7 = () => {
           {
             name: "访问来源",
             type: "pie",
-            radius: ["70%", "85% "],
+            radius: ["75%", "90% "],
             avoidLabelOverlap: false,
             label: {
               show: true,
@@ -53,8 +47,14 @@ export const Chart7 = () => {
   }, []);
   return (
     <div className="level1">
-      <div className="main" ref={divRef} />
-      <div className="text">性别</div>
+      <div className="chart">
+        <div className="main" ref={divRef} />
+        <div className="text">性别</div>
+      </div>
+      <div className="legend">
+        <span style={{ backgroundColor: colors[0] }} />男
+        <span style={{ backgroundColor: colors[1] }} />女
+      </div>
     </div>
   );
 };

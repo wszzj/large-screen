@@ -8,39 +8,43 @@ export const Chart9 = () => {
     const myChart = echarts.init(divRef.current);
     myChart.setOption(
       createEchartsOptions({
-        color: ["#8D70F8", "#33A4FA"],
-        tooltip: {
-          trigger: "item",
+        color: "#F7A110",
+        xAxis: {
+          type: "category",
+          boundaryGap: false,
+          data: [0, 18, 28, 38, 48, 58, 68, 78],
+          splitLine: { show: true, lineStyle: { color: "#073E78" } },
+          axisTick: { show: false },
+          axisLine: { show: false },
         },
-        legend: {
-          bottom: 0,
+        yAxis: {
+          type: "value",
+          splitLine: { lineStyle: { color: "#073E78" } },
+          axisLabel: {
+            formatter(value: number) {
+              return (value * 100).toString() + "%";
+            },
+          },
         },
-        xAxis: { show: false },
-        yAxis: { show: false },
-
         series: [
           {
-            name: "访问来源",
-            type: "pie",
-            radius: ["75%", "90% "],
-            avoidLabelOverlap: false,
-            label: {
-              show: true,
-              position: "inside",
-              textStyle: { color: "white", fontSize: px(20) },
-              formatter(options: { value: number; name: string }) {
-                return options.value * 100 + "%";
-              },
+            type: "line",
+            data: [0.19, 0.2, 0.26, 0.15, 0.26, 0.2, 0.08, 0.06],
+            symbol: "circle",
+            symbolSize: px(12),
+            lineStyle: { width: px(2) },
+            areaStyle: {
+              color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [
+                {
+                  offset: 0,
+                  color: "#F7A110",
+                },
+                {
+                  offset: 1,
+                  color: "#1B1D52",
+                },
+              ]),
             },
-            labelLine: { show: false },
-            itemStyle: {
-              borderColor: "#0F113A",
-              borderWidth: px(4),
-            },
-            data: [
-              { value: 0.2, name: "女" },
-              { value: 0.8, name: "男" },
-            ],
           },
         ],
       })
@@ -48,8 +52,8 @@ export const Chart9 = () => {
   }, []);
   return (
     <div className="level3">
-      <div className="main" ref={divRef} />
-      <div className="text">性别</div>
+      <h3>犯罪年龄趋势图</h3>
+      <div ref={divRef} className="chart" />
     </div>
   );
 };
