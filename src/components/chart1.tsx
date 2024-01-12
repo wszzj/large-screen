@@ -11,22 +11,25 @@ export const Chart1 = () => {
       createEchartsOptions({
         xAxis: {
           data: [
-            "兰州新区",
-            "2兰州新区",
-            "3兰州新区",
-            "4兰州新区",
-            "5兰州新区",
-            "6兰州新区",
-            "7",
-            "8",
-            "9",
+            "梁溪区",
+            "锡山区",
+            "惠山区",
+            "滨湖区",
+            "新吴区",
+            "经济开发区",
           ],
+
           axisTick: false,
+          axisLine: {
+            show: true,
+            lineStyle: { color: "#083B70" },
+          },
           axisLabel: {
+            interval: 0,
             fontSize: px(12),
             formatter(value: string) {
               if (value.length > 2) {
-                const list = value.split(" ");
+                const list = value.split("");
                 list.splice(2, 0, "\n");
                 return list.join("");
               } else {
@@ -38,16 +41,23 @@ export const Chart1 = () => {
         yAxis: {
           splitLine: { show: false },
           axisLabel: {
-            fontSize: 6,
+            fontSize: px(12),
           },
           axisLine: {
             show: true,
             lineStyle: { color: "#083B70" },
           },
         },
+        tooltip: {
+          trigger: "axis",
+          axisPointer: {
+            type: "shadow",
+          },
+        },
         series: [
           {
-            data: [12, 20, 10, 8, 27, 11, 13, 25, 6],
+            name: "数量",
+            data: [12, 20, 10, 8, 27, 11],
             type: "bar",
           },
         ],

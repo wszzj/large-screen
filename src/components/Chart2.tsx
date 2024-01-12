@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import * as echarts from "echarts";
+import { px } from "../shared/px";
 import { createEchartsOptions } from "../shared/create-echarts-options";
 
 export const Chart2 = () => {
@@ -29,14 +30,16 @@ export const Chart2 = () => {
         { name: "榆中县公安局", 2021: 2, 2022: 3 },
         { name: "新区公安局", 2021: 2, 2022: 3 },
       ];
-      x(newData);
+      createChart(newData);
     }, 1000);
   }, []);
   useEffect(() => {
     myChart.current = echarts.init(divRef.current);
-    x(data);
+    createChart(data);
   });
-  const x = (data: { name: string; 2021: number; 2022: number }[]) => {
+  const createChart = (
+    data: { name: string; 2021: number; 2022: number }[]
+  ) => {
     myChart.current?.setOption(
       createEchartsOptions({
         legend: {
@@ -45,6 +48,12 @@ export const Chart2 = () => {
           textStyle: {
             color: "white",
           },
+        },
+        grid: {
+          top: px(20),
+          left: px(40),
+          right: px(20),
+          bottom: px(40),
         },
         tooltip: {
           trigger: "axis",

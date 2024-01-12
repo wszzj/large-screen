@@ -33,10 +33,10 @@
 
         display: grid;
         grid-template:
-            "box1 box2 box4 box5" 755fr
-            "box3 box3 box4 box5" 363fr / 366fr 361fr 811fr 747fr;
-        grid-column-gap: px(28);
-        grid-row-gap: px(28);
+            "box1 box2 box4 box5" 720fr
+            "box3 box3 box4 box5" 360fr / 363fr 361fr 811fr 747fr;
+        grid-column-gap: px(24);
+        grid-row-gap: px(24);
 
         >section {
             text-align: center;
@@ -118,6 +118,7 @@
 
         >.section3 {
             grid-area: box3;
+            height: px(372);
         }
 
         >.section4 {
@@ -133,16 +134,18 @@
             flex-direction: column;
             justify-content: space-between;
 
+
             >.row1 {
-                height: px(317);
+                height: px(315);
+
             }
 
             >.row2 {
-                height: px(337);
+                height: px(335);
             }
 
             >.row3 {
-                height: px(455);
+                height: px(442);
             }
         }
 
@@ -150,16 +153,19 @@
 
         .trend,
         .timeFrame {
-            height: px(363);
+            height: px(360);
         }
 
         .ranking {
-            height: px(423);
+            height: px(405);
 
         }
 
+
+
         .result,
         .amount {
+
             padding: 0 px(24);
 
             >table {
@@ -203,7 +209,7 @@
         }
 
         .nativePlace {
-            height: px(753);
+            height: px(744);
             background: #010310;
 
             >.wrapper {
@@ -241,10 +247,11 @@
             }
         }
 
+
         .ages,
         .row1,
         .row2 {
-            height: px(363);
+            height: px(372);
 
 
             >.charts {

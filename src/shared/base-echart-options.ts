@@ -3,9 +3,9 @@ export const baseEchartOptions = {
   title: { show: false },
   legend: { show: false },
   grid: {
-    top: px(40),
+    top: px(20),
     left: px(40),
-    right: px(40),
+    right: px(20),
     bottom: px(40),
   },
   textStyle: {
