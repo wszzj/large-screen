@@ -9,6 +9,9 @@ import { Chart6 } from "../components/Chart6";
 import { Chart7 } from "../components/Chart7";
 import { Chart8 } from "../components/Chart8";
 import { Chart9 } from "../components/Chart9";
+import { Chart10 } from "../components/Chart10";
+import { Chart11 } from "../components/Chart11";
+import { Chart12 } from "../components/Chart12";
 
 export const Home = () => {
   const year = new Date().getFullYear();
@@ -39,7 +42,29 @@ export const Home = () => {
               </div>
             </div>
           </section>
-          <section className="bordered section5"></section>
+          <section className="section5">
+            <div className="bordered row1">
+              <h2>案情类型统计</h2>
+              <div className="charts">
+                <Chart10 />
+                <Chart11 />
+              </div>
+            </div>
+            <div className="bordered row2">
+              <h2>案件街道统计</h2>
+              <div className="charts">
+                <Chart10 />
+                <Chart11 />
+              </div>
+            </div>
+            <div className="bordered row3">
+              <h2>作案手段分析</h2>
+              <div className="charts">
+                <Chart10 />
+                <Chart11 />
+              </div>
+            </div>
+          </section>
         </main>
         <footer>&copy; {year}年 大屏监控</footer>
       </div>

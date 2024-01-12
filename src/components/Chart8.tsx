@@ -26,7 +26,8 @@ export const Chart8 = () => {
             label: {
               show: true,
               position: "inside",
-              textStyle: { color: "white", fontSize: px(20) },
+              color: "white",
+              fontSize: px(20),
               formatter(options: { value: number; name: string }) {
                 return (options.value * 100).toFixed(0).toString() + "%";
               },

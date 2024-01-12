@@ -87,6 +87,21 @@
 
         >.section5 {
             grid-area: box5;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            >.row1 {
+                height: px(317);
+            }
+
+            >.row2 {
+                height: px(317);
+            }
+
+            >.row3 {
+                height: px(455);
+            }
         }
 
         .statistics,
@@ -95,7 +110,10 @@
         .timeFrame,
         .result,
         .nativePlace,
-        .ages {
+        .ages,
+        .row1,
+        .row2,
+        .row3 {
             height: px(315);
             display: flex;
             flex-direction: column;
@@ -113,7 +131,13 @@
                 text-shadow: 0 0 px(3) white;
             }
 
-            >.chart {
+            .charts {
+                display: flex;
+                width: 100%;
+                flex: 1;
+            }
+
+            .chart {
                 width: 100%;
                 flex: 1;
             }
@@ -204,9 +228,7 @@
 
             >.charts {
                 position: relative;
-                width: 100%;
-                flex: 1;
-                display: flex;
+
                 padding: px(20);
 
 

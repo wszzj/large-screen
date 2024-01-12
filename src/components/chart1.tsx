@@ -23,7 +23,7 @@ export const Chart1 = () => {
           ],
           axisTick: false,
           axisLabel: {
-            fontSize: px(6),
+            fontSize: px(12),
             formatter(value: string) {
               if (value.length > 2) {
                 const list = value.split(" ");
