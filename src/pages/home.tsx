@@ -30,6 +30,15 @@ export const Home = () => {
           </section>
           <section className="bordered section4">
             <Chart6 />
+            <div className="bordered ages">
+              <h2>犯罪人员年龄段分布</h2>
+
+              <div className="charts">
+                <Chart7 />
+                <Chart8 />
+                <Chart9 />
+              </div>
+            </div>
           </section>
           <section className="bordered section5"></section>
         </main>

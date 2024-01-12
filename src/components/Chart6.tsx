@@ -3,10 +3,10 @@ import * as echarts from "echarts";
 import { createEchartsOptions } from "../shared/create-echarts-options";
 
 import china from "../geo/china.json";
-
+const colors = { 青海省: "#BB31F7", 江苏省: "#15B8FD", 四川省: "#06E1EE" };
 export const Chart6 = () => {
   const divRef = useRef(null);
-  const colors = { 青海省: "#BB31F7", 江苏省: "#15B8FD", 四川省: "#06E1EE" };
+
   useEffect(() => {
     const myChart = echarts.init(divRef.current);
     echarts.registerMap("CN", china);

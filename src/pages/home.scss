@@ -100,7 +100,8 @@
         .trend,
         .timeFrame,
         .result,
-        .nativePlace {
+        .nativePlace,
+        .ages {
             height: px(315);
             display: flex;
             flex-direction: column;
@@ -199,6 +200,47 @@
 
 
             }
+        }
+
+        .ages {
+            height: px(363);
+
+            >.charts {
+                position: relative;
+                width: 100%;
+                flex: 1;
+                display: flex;
+                padding: px(16);
+
+                >.level1,
+                >.level2,
+                >.level3 {
+                    flex: 1;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    position: relative;
+                }
+
+                .main {
+                    width: 90%;
+                    flex: 1;
+
+                }
+
+                .text {
+                    font-size: px(40);
+                    position: absolute;
+                    bottom: 50%;
+                    left: 50%;
+                    transform: translate(-50%, 50%);
+                }
+
+
+
+
+            }
+
         }
     }
 }
