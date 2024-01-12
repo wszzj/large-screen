@@ -9,6 +9,7 @@ export const Chart6 = () => {
 
   useEffect(() => {
     const myChart = echarts.init(divRef.current);
+    // @ts-expect-error 地图JSON
     echarts.registerMap("CN", china);
     myChart.setOption(
       createEchartsOptions({

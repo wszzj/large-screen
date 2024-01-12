@@ -40,6 +40,12 @@ export const Chart3 = () => {
             },
           },
         },
+        tooltip: {
+          trigger: "axis",
+          axisPointer: {
+            type: "line",
+          },
+        },
         series: [
           {
             name: "抢劫",

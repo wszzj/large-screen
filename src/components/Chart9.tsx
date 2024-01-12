@@ -26,10 +26,16 @@ export const Chart9 = () => {
             },
           },
         },
+        tooltip: {
+          trigger: "axis",
+          axisPointer: {
+            type: "line",
+          },
+        },
         series: [
           {
             type: "line",
-            data: [0.19, 0.2, 0.26, 0.15, 0.26, 0.2, 0.08, 0.06],
+            data: [0, 0.2, 0.26, 0.15, 0.26, 0.2, 0.08, 0.06],
             symbol: "circle",
             symbolSize: px(12),
             lineStyle: { width: px(2) },

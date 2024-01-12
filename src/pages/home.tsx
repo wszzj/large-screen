@@ -19,6 +19,7 @@ import { Chart14 } from "../components/Chart14";
 
 export const Home = () => {
   const year = new Date().getFullYear();
+
   return (
     <div className="App">
       <div className="home">

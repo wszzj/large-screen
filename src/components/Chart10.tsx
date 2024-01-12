@@ -16,10 +16,15 @@ export const Chart10 = () => {
             lineStyle: { color: "#083B70" },
           },
           axisLabel: {
+            interval: 0,
             fontSize: px(12),
+            axisLine: {
+              show: true,
+              lineStyle: { color: "#083B70" },
+            },
             formatter(value: string) {
               if (value.length > 2) {
-                const list = value.split(" ");
+                const list = value.split("");
                 list.splice(2, 0, "\n");
                 return list.join("");
               } else {
@@ -31,11 +36,17 @@ export const Chart10 = () => {
         yAxis: {
           splitLine: { show: false },
           axisLabel: {
-            fontSize: 6,
+            fontSize: px(12),
           },
           axisLine: {
             show: true,
             lineStyle: { color: "#083B70" },
+          },
+        },
+        tooltip: {
+          trigger: "axis",
+          axisPointer: {
+            type: "shadow",
           },
         },
         series: [

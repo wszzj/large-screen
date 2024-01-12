@@ -5,15 +5,12 @@ import { createEchartsOptions } from "../shared/create-echarts-options";
 export const Chart12 = () => {
   const divRef = useRef(null);
   const data = [
-    { value: 0.08, name: "东岗路" },
-    { value: 0.06, name: "段家滩" },
-    { value: 0.11, name: "雁北" },
-    { value: 0.09, name: "五泉山" },
-    { value: 0.12, name: "中山路" },
-    { value: 0.06, name: "庆阳路" },
-    { value: 0.08, name: "武都路" },
-    { value: 0.08, name: "酒泉路" },
-    { value: 0.08, name: "天水路" },
+    { value: 0.08, name: "惠山街道" },
+    { value: 0.06, name: "东亭街道" },
+    { value: 0.11, name: "长安街道" },
+    { value: 0.09, name: "荣巷街道" },
+    { value: 0.12, name: "新安街道" },
+    { value: 0.06, name: "华庄街道" },
   ];
   useEffect(() => {
     const myChart = echarts.init(divRef.current);
@@ -36,8 +33,8 @@ export const Chart12 = () => {
             color: "white",
           },
 
-          itemWidth: px(10),
-          itemHeight: px(10),
+          itemWidth: px(12),
+          itemHeight: px(12),
           formatter(name: string) {
             let value = data.find((i) => {
               return i.name === name;
@@ -47,6 +44,9 @@ export const Chart12 = () => {
             }
             return name + " " + value + "%";
           },
+        },
+        tooltip: {
+          trigger: "item",
         },
         series: [
           {
@@ -67,7 +67,7 @@ export const Chart12 = () => {
         ],
       })
     );
-  }, []);
+  });
   return (
     <div className="level1">
       <div className="chart">

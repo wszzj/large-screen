@@ -6,15 +6,12 @@ import { createEchartsOptions } from "../shared/create-echarts-options";
 export const Chart13 = () => {
   const divRef = useRef(null);
   const data = [
-    { value: 0.08, name: "东岗路" },
-    { value: 0.06, name: "段家滩" },
-    { value: 0.11, name: "雁北" },
-    { value: 0.09, name: "五泉山" },
-    { value: 0.12, name: "中山路" },
-    { value: 0.06, name: "庆阳路" },
-    { value: 0.08, name: "武都路" },
-    { value: 0.08, name: "酒泉路" },
-    { value: 0.08, name: "天水路" },
+    { value: 0.08, name: "惠山街道" },
+    { value: 0.06, name: "东亭街道" },
+    { value: 0.11, name: "长安街道" },
+    { value: 0.09, name: "荣巷街道" },
+    { value: 0.12, name: "新安街道" },
+    { value: 0.06, name: "华庄街道" },
   ];
   useEffect(() => {
     const myChart = echarts.init(divRef.current);
@@ -30,7 +27,7 @@ export const Chart13 = () => {
             fontSize: px(12),
             formatter(value: string) {
               if (value.length > 2) {
-                const list = value.split(" ");
+                const list = value.split("");
                 list.splice(2, 0, "\n");
                 return list.join("");
               } else {
@@ -42,7 +39,7 @@ export const Chart13 = () => {
         yAxis: {
           splitLine: { show: false },
           axisLabel: {
-            fontSize: 6,
+            fontSize: px(12),
             formatter(value: number) {
               return (value * 100).toString() + "%";
             },
@@ -50,6 +47,12 @@ export const Chart13 = () => {
           axisLine: {
             show: true,
             lineStyle: { color: "#083B70" },
+          },
+        },
+        tooltip: {
+          trigger: "axis",
+          axisPointer: {
+            type: "shadow",
           },
         },
         series: [
@@ -70,6 +73,6 @@ export const Chart13 = () => {
         ],
       })
     );
-  }, []);
+  });
   return <div ref={divRef} className="chart"></div>;
 };

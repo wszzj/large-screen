@@ -7,28 +7,22 @@ export const Chart2 = () => {
   const divRef = useRef(null);
   const myChart = useRef<echarts.ECharts | null>(null);
   const data = [
-    { name: "城关区公安局", 2021: 2, 2022: 3 },
-    { name: "七里河区公安局", 2021: 2, 2022: 3 },
-    { name: "西固区公安局", 2021: 25, 2022: 3 },
-    { name: "安宁区公安局", 2021: 2, 2022: 3 },
-    { name: "红古区公安局", 2021: 2, 2022: 3 },
-    { name: "永登县公安局", 2021: 2, 2022: 3 },
-    { name: "皋兰县公安局", 2021: 2, 2022: 3 },
-    { name: "榆中县公安局", 2021: 2, 2022: 3 },
-    { name: "新区公安局", 2021: 2, 2022: 3 },
+    { name: "梁溪公安局", 2021: 12, 2022: 23 },
+    { name: "锡山公安局", 2021: 23, 2022: 34 },
+    { name: "惠山公安局", 2021: 5, 2022: 23 },
+    { name: "滨湖公安局", 2021: 18, 2022: 13 },
+    { name: "新吴公安局", 2021: 42, 2022: 30 },
+    { name: "经开公安局", 2021: 32, 2022: 15 },
   ];
   useEffect(() => {
     setInterval(() => {
       const newData = [
-        { name: "城关区公安局", 2021: 2, 2022: Math.random() * 10 },
-        { name: "七里河区公安局", 2021: 2, 2022: 3 },
-        { name: "西固区公安局", 2021: 2, 2022: 3 },
-        { name: "安宁区公安局", 2021: 12, 2022: 3 },
-        { name: "红古区公安局", 2021: 2, 2022: 3 },
-        { name: "永登县公安局", 2021: 2, 2022: 3 },
-        { name: "皋兰县公安局", 2021: 2, 2022: 3 },
-        { name: "榆中县公安局", 2021: 2, 2022: 3 },
-        { name: "新区公安局", 2021: 2, 2022: 3 },
+        { name: "梁溪公安局", 2021: 22, 2022: 30 },
+        { name: "锡山公安局", 2021: 12, 2022: 18 },
+        { name: "惠山公安局", 2021: 15, 2022: 30 },
+        { name: "滨湖公安局", 2021: 20, 2022: 14 },
+        { name: "新吴公安局", 2021: 33, 2022: 24 },
+        { name: "经开公安局", 2021: 14, 2022: 43 },
       ];
       createChart(newData);
     }, 1000);
@@ -44,14 +38,16 @@ export const Chart2 = () => {
       createEchartsOptions({
         legend: {
           data: ["2021年", "2022年"],
-          bottom: 0,
+          bottom: px(8),
+          itemWidth: px(36),
+          itemHeight: px(20),
           textStyle: {
             color: "white",
           },
         },
         grid: {
           top: px(20),
-          left: px(40),
+          left: px(60),
           right: px(20),
           bottom: px(40),
         },
@@ -69,6 +65,7 @@ export const Chart2 = () => {
         },
         yAxis: {
           type: "category",
+          axisTick: false,
           data: data.map((i) => i.name),
           axisLabel: {
             formatter(value: string) {
@@ -97,7 +94,7 @@ export const Chart2 = () => {
           {
             name: "2022年",
             type: "bar",
-            data: data.map((i) => i[2021]),
+            data: data.map((i) => i[2022]),
             itemStyle: {
               color: new echarts.graphic.LinearGradient(0, 0, 1, 0, [
                 {

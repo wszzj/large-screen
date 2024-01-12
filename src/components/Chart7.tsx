@@ -21,7 +21,7 @@ export const Chart7 = () => {
           {
             name: "访问来源",
             type: "pie",
-            radius: ["75%", "90% "],
+            radius: ["75%", "90%"],
             avoidLabelOverlap: false,
             label: {
               show: true,
@@ -43,7 +43,7 @@ export const Chart7 = () => {
         ],
       })
     );
-  }, []);
+  });
   return (
     <div className="level1">
       <div className="chart">

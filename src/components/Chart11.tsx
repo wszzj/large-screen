@@ -36,16 +36,16 @@ export const Chart11 = () => {
               shadowColor: "rgba(0, 0, 0, 0.5)",
             },
             data: [
-              { value: 0.36, name: "刑事案件" },
-              { value: 0.22, name: "民事案件" },
-              { value: 0.18, name: "经济案件" },
+              { value: 0.16, name: "刑事案件" },
+              { value: 0.32, name: "民事案件" },
+              { value: 0.28, name: "经济案件" },
               { value: 0.24, name: "其他案件" },
             ],
           },
         ],
       })
     );
-  }, []);
+  });
 
   return (
     <div className="level1">

@@ -13,10 +13,8 @@ export const Chart8 = () => {
         tooltip: {
           trigger: "item",
         },
-
         xAxis: { show: false },
         yAxis: { show: false },
-
         series: [
           {
             name: "访问来源",
@@ -46,7 +44,7 @@ export const Chart8 = () => {
         ],
       })
     );
-  }, []);
+  });
   return (
     <div className="level2">
       <div className="chart">
