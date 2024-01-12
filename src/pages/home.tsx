@@ -1,5 +1,7 @@
 import "./home.scss";
 import headerBg from "../images/header.png";
+import footerBg from "../images/footer.png";
+
 import { Chart1 } from "../components/Chart1";
 import { Chart2 } from "../components/Chart2";
 import { Chart3 } from "../components/Chart3";
@@ -20,7 +22,9 @@ export const Home = () => {
   return (
     <div className="App">
       <div className="home">
-        <header style={{ backgroundImage: `url(${headerBg})` }}></header>
+        <header style={{ backgroundImage: `url(${headerBg})` }}>
+          大屏监控
+        </header>
         <main>
           <section className="section1">
             <Chart1 />
@@ -64,7 +68,9 @@ export const Home = () => {
             </div>
           </section>
         </main>
-        <footer>&copy; {year}年 大屏监控</footer>
+        <footer style={{ backgroundImage: `url(${footerBg})` }}>
+          {year}年 made by Zzj
+        </footer>
       </div>
     </div>
   );

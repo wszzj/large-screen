@@ -7,29 +7,30 @@
     background: #010310;
     color: white;
     font-size: px(16);
+    justify-content: space-between;
 
-    >header {
-        height: px(99);
+    >header,
+    >footer {
+        height: px(80);
         background-size: cover;
         width: px(2420);
         margin: 0 auto;
+        position: relative;
+        text-align: center;
+        line-height: px(80);
+        font-size: px(20);
     }
 
-    >footer {
-        height: px(68);
-        border: 1px solid #0d2d59;
-        margin: px(20) 0 1px;
-        border-radius: 4px;
-        background: #0c0d2b;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    >header {
+        font-size: px(32);
     }
+
+
 
     >main {
         width: px(2420);
         margin: 0 auto;
-        padding-top: px(30);
+
         display: grid;
         grid-template:
             "box1 box2 box4 box5" 755fr
