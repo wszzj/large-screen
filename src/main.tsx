@@ -1,10 +1,15 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
+import { StrictMode } from "react";
+import * as ReactDOMClient from "react-dom/client";
+import { HashRouter } from "react-router-dom";
+
 import App from "./App.tsx";
+
 import "./shared/style.scss";
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+ReactDOMClient.createRoot(document.getElementById("root")!).render(
+  <StrictMode>
+    <HashRouter>
+      <App />
+    </HashRouter>
+  </StrictMode>
 );
